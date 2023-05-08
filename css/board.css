@@ -1,0 +1,83 @@
+.board {
+	position: relative;
+}
+
+.board .inside {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 5px;
+	position: relative;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 5px;
+}
+
+.tile {
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 2px solid #565758;
+	box-shadow: 2px 2px 2px #000;
+}
+
+.is-filled {
+	border-color: #d8d8d8;
+}
+
+.wrong {
+	border-color: #e4e4e4e3;
+    background-color: #e4e4e4e3;
+    color: #000;
+ 
+}
+
+.present {
+	border-color: #b59f3b;
+	background-color: #b59f3b;
+}
+
+.correct {
+	border-color: #538d4e;
+	background-color: #538d4e;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 600px) {
+	.board .tile {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	.board .tile {
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+@media only screen and (max-height: 660px) {
+	.board .tile {
+		width: 3rem;
+		height: 3rem;
+	}
+}
+
+@media only screen and (max-height: 560px) {
+	.board .tile {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}

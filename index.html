@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Písmenka ❤</title>
+    <meta name="description" content="Kopie WORDLE. Uhádni české slovo. Máš 6 pokusov. ">
+
+    <link rel="website icon" type="png" href="./img/p.png">
+    
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <link rel="stylesheet" href="./css/effects.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="stylesheet" href="./css/modal.css">
+
+    <script defer src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/confets.js" ></script>
+    <script src="./js/allWordsCS.js"></script>
+    <script src="./js/allWordsENG.js"></script>
+    <script defer src="./js/languageChanger.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;600&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="title">Písmenka <div class="heart">♥️</div></div>
+
+        <!-- <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="leftClick()">CS</button>
+                <button type="button" class="toggle-btn" onclick="rightClick()">ENG</button>
+            </div>
+        </div> -->
+
+        <div class="menu">
+            <button href="#" data-micromodal-trigger="modal-rules" class="rules">Pravidla❓</button>
+        </div>
+        
+    </header>
+
+    <main class="board">
+        <p class="tooltip animate__animated">Toto slovo neznám <br> ¯\_(ツ)_/¯</p>
+
+        <div class="inside">
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="row">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section class="keyboard">
+            <div class="row">
+                <button class="tile" id="q">q</button>
+                <button class="tile" id="w">w</button>
+                <button class="tile" id="e">e</button>
+                <button class="tile" id="r">r</button>
+                <button class="tile" id="t">t</button>
+                <button class="tile" id="z">z</button>
+                <button class="tile" id="u">u</button>
+                <button class="tile" id="i">i</button>
+                <button class="tile" id="o">o</button>
+                <button class="tile" id="p">p</button>
+            </div>
+
+            <div class="row">
+                <button class="tile" id="a">a</button>
+                <button class="tile" id="s">s</button>
+                <button class="tile" id="d">d</button>
+                <button class="tile" id="f">f</button>
+                <button class="tile" id="g">g</button>
+                <button class="tile" id="h">h</button>
+                <button class="tile" id="j">j</button>
+                <button class="tile" id="k">k</button>
+                <button class="tile" id="l">l</button>
+                <button class="tile double" id="←">⌫</button>
+            </div>
+
+            <div class="row">
+                
+                <button class="tile" id="y">y</button>
+                <button class="tile" id="x">x</button>
+                <button class="tile" id="c">c</button>
+                <button class="tile" id="v">v</button>
+                <button class="tile" id="b">b</button>
+                <button class="tile" id="n">n</button>
+                <button class="tile" id="m">m</button>
+                
+                <button class="tile double enter" id="↵">enter</button>
+            </div>
+
+            <div class="winner">
+                <button class="tile large" id="again"> Hraj znovu <br> ♥️</button>
+            </div>
+        </section>
+
+        <section class="modal micromodal-slide" id="modal-rules" aria-hidden="false">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-rules-title">
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+                    <article class="modal__content" id="modal-rules-content">
+                        <p>
+                            Hra je určena každému, kdo si chce užít zábavu a přitom si rozšířit slovní zásobu. <br> <br>
+                            Písmenko <strong>CH</strong> je bráno jako dvě písmena. <br>
+                            Hra <strong>neobsahuje</strong> vulgarismy! 👊🏼
+                        </p>
+
+                        <p>
+                            Hra Písmenka je inspirována <a target="_blank" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>. <br>
+                            Na uhádnutí slova máš 6 pokusů. <br> <br>
+                            Po zadání prvního slova se písmenka vybarví:
+                        </p>
+
+                        <div class="row">
+                            <div class="tile wrong">l</div>
+                            <div class="tile wrong">á</div>
+                            <div class="tile present">s</div>
+                            <div class="tile wrong">k</div>
+                            <div class="tile present">a</div>
+                        </div>
+                        <p class="middle">
+                            <span class="wrong">BÍLÁ</span> znamená, že písmeno ve slově vůbec není.
+                        </p>
+    
+                        <div class="row">
+                            <div class="tile present">s</div>
+                            <div class="tile ">l</div>
+                            <div class="tile present">o</div>
+                            <div class="tile ">v</div>
+                            <div class="tile present">o</div>
+                        </div>
+                        <p class="middle">
+                            <span class="present">ŽLUTÁ</span> znamená, že slovo obsahuje toto písmeno.
+                        </p>
+     
+                            <div class="row">
+                                <div class="tile correct">n</div>
+                                <div class="tile correct">á</div>
+                                <div class="tile ">z</div>
+                                <div class="tile ">o</div>
+                                <div class="tile correct">r</div>
+                            </div>
+                        <p class="middle">
+                            <span class="correct">ZELENÁ</span>, že písmeno je i na správném místě.
+                        </p>
+         
+                                <p>
+                                    Můžeš psát <strong>bez DIAKRITIKY</strong>.
+                                    <strong>Nejsou zde žádná přídavná jména, slovesa ani jména.</strong>
+                                </p>
+
+                                <p class="middle">
+                                    Jedná se o <strong>beta verzi</strong>. Chybí nějaké slovo? <br> Máš feedback? <br> <br>
+                                    Ale <strong>ŽÁDNÁ</strong> sprostá, či jinak urážlivá slova! <br> <br>
+                                    Napiš mi na <a href="https://www.instagram.com/daniel_kokay/">instagram</a>.
+                                </p>
+                        
+
+                    </article>
+                </div>
+            </div>
+
+            <canvas></canvas>
+        </section>
+    </footer>
+
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR7BRN6B9B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HR7BRN6B9B');
+    </script>
+</body>
+
+</html>
