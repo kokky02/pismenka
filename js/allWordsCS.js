@@ -1076,6 +1076,18 @@ const allWordsCS = [
     'žolík',
     'žumpa',
     'žezlo',
+    'notes',
+    'trasa',
+    'clona',
+    'polka',
+    'borka',
+    'karas',
+    'okoun',
+    'perla',
+    'holka',
+    'lupus',
+    'sleva',
+    'slovo',
     
 
 

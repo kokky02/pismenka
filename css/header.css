@@ -43,18 +43,22 @@ header p {
 	font-family: 'DynaPuff', cursive;
 }
 
-/* .button-box{
-	width: 220px;
+
+/* 
+.button-box{
+	width: 100px;
 	margin: 35px auto;
-	position: relative;
+	position: absolute; 
+	display: flex;
+	top: -1.5%;
+	right: 89%;
 	border-radius: 30px;
 	background: #565758;
-	
-	
+	justify-content: start;
 }
 
 .toggle-btn{
-	padding: 10px 40px;
+	padding: 7px 13px;
 	cursor: pointer;
 	background: transparent;
 	border: 0;
@@ -63,19 +67,17 @@ header p {
 	text-align: center;	
 	color: #fff;
 	font-family: 'DynaPuff', cursive;
-	
 }
 
 #btn{
 	left: 0;
 	top: 0;
 	position: absolute;
-	width: 110px;
+	width: 50px;
 	height: 100%;
 	background: #FFDB85;
 	border-radius: 30px;
 	transition: .5s;
-	
 } */
 
 

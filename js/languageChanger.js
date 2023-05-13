@@ -5,5 +5,5 @@ function leftClick() {
 }
 
 function rightClick() {
-    btn.style.left = '110px'
+    btn.style.left = '50px'
 }
