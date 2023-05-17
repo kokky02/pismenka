@@ -1,6 +1,6 @@
 header {
 	display: flex;
-	align-items: center;
+	
 	padding: 5px 0;
 }
 
@@ -12,6 +12,7 @@ header h1,
 header p {
 	margin: 0;
 }
+
 .title {
 	font-family: 'DynaPuff', cursive;
 	font-size: 2.75rem;
@@ -19,13 +20,15 @@ header p {
 	letter-spacing: -2px;
 	text-transform: uppercase;
 	color: #FFDB85;
-
+	text-decoration: none;
 	text-align: center;
+	letter-spacing: 1px;
 	margin-right: 0;
-	
+	user-select: none;
 }
+
 .heart{
-	color: #FF0000;
+	color: #f8312f;
 }
 
 .rules{
@@ -41,29 +44,35 @@ header p {
 	color: #fff;
 	font-size: 0.95rem;
 	font-family: 'DynaPuff', cursive;
+	letter-spacing: .8px;
 }
 
+.eng{
+	left: 7.5px;
+}
+.cs{
+	right: -2.5px;
+}
 
-/* 
 .button-box{
 	width: 100px;
-	margin: 35px auto;
+	margin: 23px auto;
 	position: absolute; 
 	display: flex;
 	top: -1.5%;
-	right: 89%;
+	left: 3%;
 	border-radius: 30px;
 	background: #565758;
-	justify-content: start;
 }
 
 .toggle-btn{
 	padding: 7px 13px;
-	cursor: pointer;
-	background: transparent;
 	border: 0;
 	outline: none;
 	position: relative;
+
+	cursor: pointer;
+	background: transparent;
 	text-align: center;	
 	color: #fff;
 	font-family: 'DynaPuff', cursive;
@@ -75,10 +84,11 @@ header p {
 	position: absolute;
 	width: 50px;
 	height: 100%;
+
 	background: #FFDB85;
 	border-radius: 30px;
 	transition: .5s;
-} */
+}
 
 
 
@@ -89,12 +99,10 @@ header p {
 	.title {
 		font-size: 2.5rem;
 		letter-spacing: -2px;
-		
 	}
 
 	.rules {
-		font-size: 0.85rem;
-		
+		font-size: 0.85rem;	
 	}
 }
 
@@ -103,11 +111,9 @@ header p {
 	.title {
 		font-size: 2.3rem;
 		letter-spacing: -2px;
-		
 	}
 
 	.rules {
 		font-size: 0.75rem;
-		
 	}
 }

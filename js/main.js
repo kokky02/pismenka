@@ -218,13 +218,43 @@ const tooltipHellYeah = () => {
 const maxWordLength = 5
 const maxTries = 6
 
-let solution = allWordsCS[(allWordsCS.length * Math.random()) | 0].toLowerCase()
-let word = ""
-let tries = 1
+const lang = document.querySelector('.button-box')
 
-// no accents (pre slovencinu)
-let noAccentWords = allWordsCS.map((x) => noAccents(x))
-let noAccentSolution = noAccents(solution)
+const changeLanguage = {
+    whichLang: '',
+  };
+  
+  let thisLanguage = localStorage.getItem('selectedLanguage') === 'cs' ? allWordsCS : allWordsENG;
+  
+  lang.addEventListener('click', function (event) {
+    changeLanguage.whichLang = event.srcElement.className;
+  
+    if (changeLanguage.whichLang === 'toggle-btn cs') {
+      thisLanguage = allWordsCS;
+      localStorage.setItem('selectedLanguage', 'cs'); // Saving the selected language (cs) to localStorage
+    } else {
+      thisLanguage = allWordsENG;
+      localStorage.setItem('selectedLanguage', 'en'); // Saving the selected language (eng) to localStorage
+    }
+  
+    // Update solution, noAccentWords, noAccentSolution values after language change
+    solution = thisLanguage[(thisLanguage.length * Math.random()) | 0].toLowerCase();
+    noAccentWords = thisLanguage.map((x) => noAccents(x));
+    noAccentSolution = noAccents(solution);
+  
+    // Page refresh
+    window.location.reload();
+  });
+  
+  let solution = thisLanguage[(thisLanguage.length * Math.random()) | 0].toLowerCase();
+  let word = '';
+  let tries = 1;
+  
+  // no accents
+  let noAccentWords = thisLanguage.map((x) => noAccents(x));
+  let noAccentSolution = noAccents(solution);
+  
+  
 
 let canSubmit = true
 let gameEnded = false
