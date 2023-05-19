@@ -224,7 +224,7 @@ const changeLanguage = {
     whichLang: '',
   };
   
-  let thisLanguage = localStorage.getItem('selectedLanguage') === 'cs' ? allWordsCS : allWordsENG;
+  let thisLanguage = localStorage.getItem('selectedLanguage') === 'en' ? allWordsENG : allWordsCS;
   
   lang.addEventListener('click', function (event) {
     changeLanguage.whichLang = event.srcElement.className;

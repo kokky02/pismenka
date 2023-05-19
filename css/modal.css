@@ -6,14 +6,24 @@
 .modal__content span.correct,
 .modal__content span.wrong 
 {
-    display: inline-block;
+    	display: inline-block;
 	margin-bottom: 2px;
 	padding: 1px 4px;
 	border-radius: 3px;
 	font-weight: 500;
 	color: #000;
 }
+.inspirate {
+	font-size: 12px;
+	text-align: center;
+	
+}
 
+.test-row {
+	display: flex;
+	grid-template-columns: repeat(5, 1fr);
+	
+}
 .modal__content {
     font-size: 0.9rem;
 }
@@ -32,18 +42,21 @@
 }
 
 .modal__content .tile {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 4px;
+    
 }
 
 @media screen and (min-width: 460px) {
 	.modal__content {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     
     .modal__content .tile {
-		width: 3.5rem;
-		height: 3.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		
 	}
 }
 
