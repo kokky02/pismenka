@@ -1,11 +1,7 @@
 const allWordsCS = [
-    'afgán',
     'ajťák',
     'akord',
     'akril',
-    'aktiv',
-    'alíky',
-    'alkáč',
     'amant',
     'anděl',
     'anima',
