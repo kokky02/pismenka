@@ -37,7 +37,7 @@ header p {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	right: 30px;
+	right: 0.5%;
 	top: 25px;
 
 	cursor: pointer;
