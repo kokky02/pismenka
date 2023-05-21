@@ -151,7 +151,6 @@ const allWordsCS = [
     'držka',
     'držák',
     'dýško',
-    'býček',
     'délka',
     'dcera',
     'emzák',
@@ -1084,17 +1083,7 @@ const allWordsCS = [
     'lupus',
     'sleva',
     'slovo',
-    
-
-
-
-
-
-
-
-
-    
-    
-
-    
+    'revma',
+    'rukáv',
+    'tráva',
     ]
