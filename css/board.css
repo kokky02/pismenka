@@ -7,6 +7,8 @@
 	grid-template-rows: repeat(6, 1fr);
 	gap: 5px;
 	position: relative;
+	background: transparent;
+backdrop-filter: blur(11px);
 }
 
 .row {
