@@ -3,14 +3,14 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background: url(/img/autumn2.jpg) no-repeat;
+	background: url(/img/summer.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-color: rgb(61, 61, 61);
 }
 
 body {
-	color: #d8d8d8;
+	color: #fff;
 	font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Open Sans", sans-serif;
 	text-align: center;
 

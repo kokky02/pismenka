@@ -8,7 +8,8 @@
 	gap: 5px;
 	position: relative;
 	background: transparent;
-backdrop-filter: blur(11px);
+	backdrop-filter: blur(11px);
+	
 }
 
 .row {
@@ -39,8 +40,8 @@ backdrop-filter: blur(11px);
 
 .wrong {
 	border-color: #e4e4e4e3;
-    background-color: #e4e4e4e3;
-    color: #000;
+    	background-color: #e4e4e4e3;
+    	color: #000;
  
 }
 
