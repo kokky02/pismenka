@@ -21,5 +21,11 @@
 .date {
      margin-top: 12px;
      font-size: 1.75em;
+}
 
+/* date-time RESPONSIVE */
+@media only screen and (max-width: 868px) {
+	.datetime {
+          display: none;
+     }
 }
