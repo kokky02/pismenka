@@ -24,8 +24,6 @@ function formatDate(date) {
 
      return `${DAYS[date.getDay()]}, ${date.getDate()}. ${MONTHS[date.getMonth()]}`
 
-     
-
 }
 
 setInterval(() => {
