@@ -18,8 +18,9 @@ header p {
   	flex-direction: column;
   	align-items: center; 
   	justify-content: flex-start;
-	background-color: rgb(60, 60, 60);
+	background-color: rgba(60, 60, 60, .9);
 	width: 100vw;
+	height: 45px;
 }
 
 .title {
@@ -34,6 +35,7 @@ header p {
 	letter-spacing: 1px;
 	user-select: none;
 	margin-right: auto;
+	margin-top: -6px;
 }
 
 .heart{
@@ -70,7 +72,7 @@ header p {
 	margin: 23px auto;
 	position: absolute; 
 	display: flex;
-	top: -5.5px;
+	top: -9.5px;
 	left: 3%;
 	border-radius: 30px;
 	background: #c6c7c7;
