@@ -1,8 +1,8 @@
 const backgroundImages = {
-    spring: 'url(/img/spring.jpg)',
-    summer: 'url(/img/summer.jpg)',
-    autumn: 'url(/img/autumn.jpg)',
-    winter: 'url(/img/winter.jpg)',
+    spring: 'url(spring.jpg)',
+    summer: 'url(summer.jpg)',
+    autumn: 'url(autumn.jpg)',
+    winter: 'url(winter.jpg)',
   }
   
   function getSeason() {
@@ -22,3 +22,5 @@ const backgroundImages = {
   
   // Call the function to set the background when the page loads
   setSeasonalBackground()
+
+  
