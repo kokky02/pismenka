@@ -1086,4 +1086,5 @@ const allWordsCS = [
     'revma',
     'rukáv',
     'tráva',
+    'lžíce',
     ]
